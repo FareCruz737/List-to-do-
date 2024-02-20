@@ -1,53 +1,118 @@
-const input = document.querySelector(".input"); 
-const boton = document.querySelector(".boton"); 
-const list = document.querySelector(".list"); 
-const ini = document.querySelector(".inicio"); 
 
-// selecionamos los elementos 
-
-boton.addEventListener("click", (a) => {
-
-a.preventDefault(); 
-
-const text = input.value; 
-
-const li = document.createElement("li"); 
-li.classList.add("list-hijo"); 
-const p = document.createElement('p'); 
-p.textContent = text; 
+const inputOne = document.getElementById('input-one'); 
+const buttonOne = document.getElementById('button-one'); 
+const cajaOne = document.getElementById('do'); 
+const AletLugar = document.querySelector('.Aviso')
+ 
+// Selector de elementos
 
 
-li.appendChild(p)
-li.appendChild(butondelete()); 
-list.appendChild(li); 
+buttonOne.addEventListener('click', () => {
+
+let guardar = inputOne.value; 
+if (guardar.trim() === '') {
+
+return; 
+}
 
 
-input.value = ""; 
+const caja = document.createElement('li'); 
+caja.className = 'caja-one'; 
+
+const palabra = document.createElement('p'); 
+palabra.textContent =  document.getElementById('input-one').value; 
+
+const listo = document.createElement('button'); 
+listo.textContent = 'Listo'; 
+
+listo.addEventListener('click', () => {
+
+
+caja.removeChild(terminado); 
+caja.removeChild(listo); 
+palabra.textContent = `${guardar} ✔`; 
+
+
+
+const hecho = document.createElement('button');
+hecho.textContent = 'Quitar'; 
+caja.appendChild(hecho); 
+
+hecho.addEventListener('click', () => {
+
+caja.appendChild(listo); 
+caja.appendChild(terminado); 
+palabra.textContent = guardar;
+caja.removeChild(hecho)
+} )
+
+}) 
+
+
+const terminado = document.createElement('button'); 
+terminado.textContent = 'Eliminar'; 
+terminado.addEventListener('click', () => {
+cajaOne.removeChild(caja); 
+const alertOne = document.createElement('div'); 
+alertOne.textContent = `Se elimino ${guardar}`;
+AletLugar.appendChild(alertOne);  
+setTimeout(() => {
+    AletLugar.removeChild(alertOne)
+    
+    
+    }, 1000)
 
 })
 
-
-// esta function crea un elemento li y p para asi poder alamacenar a p en una lista y mostrar todos los datos 
-// tambien permite que cada vez que agreguen una nueva tarea no se cargue la pagina y que el input quede en blanco 
-// tambien se usara una function que se explica mas abajo 
-
-function butondelete() {
-
-const btn = document.createElement('button'); 
-
-btn.textContent = "X";
-btn.className = "btn-delete"; 
-
-btn.addEventListener('click', (a) => {
-
-const item = a.target.parentElement;
-list.removeChild(item); 
+palabra.addEventListener('dblclick', () => {
 
 
-}); 
 
-return btn; 
+const aceptar = document.createElement('button'); 
+aceptar.textContent = 'confirmar'; 
+const cancelar = document.createElement('button'); 
+cancelar.textContent = 'cancelar'; 
 
-}
+const  guardado2 = palabra.textContent; 
+const newText = document.createElement('input'); 
+newText.type = 'text'; 
+newText.value = guardado2; 
 
-// Esta funcion crear un boto que elimina todas las listas si estas ya estan completadas
+palabra.textContent =''; 
+palabra.appendChild(newText);
+
+
+aceptar.addEventListener('click', () => {
+
+const nuevotex = newText.value; 
+palabra.textContent = nuevotex
+
+listo.addEventListener('click', () => {
+palabra.textContent = nuevotex + 'sip'; 
+})
+    
+
+caja.appendChild(listo); 
+caja.appendChild(terminado); 
+
+caja.removeChild(aceptar); 
+caja.removeChild(cancelar); 
+
+})
+
+caja.appendChild(aceptar);
+caja.appendChild(cancelar); 
+
+caja.removeChild(listo)
+caja.removeChild(terminado)
+
+})
+
+caja.appendChild(palabra)
+caja.appendChild(listo)
+caja.appendChild(terminado); 
+cajaOne.appendChild(caja); 
+console.log('se hizo'); 
+inputOne.value = ''
+})
+

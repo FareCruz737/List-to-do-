@@ -1,0 +1,19 @@
+.end{
+margin: 5px 20px;
+animation-name: mover;
+animation-duration: 3s;
+animation-direction: reverse;
+/* animation-fill-mode: forwards; */
+
+
+}
+
+@keyframes mover{
+0%{
+transform:  translateX(-100%);
+}
+100%{
+transform: translateX(2%);
+}
+
+}

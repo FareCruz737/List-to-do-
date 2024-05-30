@@ -3,42 +3,51 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!-- <link rel="stylesheet" href="./styles.css"> -->
-<link rel="icon" href="./clipboard.png" type="image/png">
+<link rel="stylesheet" href="./styles.css">
+<link rel="stylesheet" href="./mover.css">
+<link rel="icon" href="./img/icons8-list-64.png">
 <title>Lista</title>
 </head>
 <body> 
 
+
+<div id="Eliminados"></div>
 
 
 <header>
 <h1>Lista de Tareas</h1>
 </header>
 
-<section>
+<section class="pensar">
 <h2>¿Que piensas hacer hoy?</h2>  
 </section>
 
-<section>
+<section class="Input-button">
 <input type="text" id="Input" placeholder="Hacer">   
-<button id="Button">Hacer</button>
+<button id="Button">Visto</button>
 </section>
 
 
 <main class="Times">
 
 <section class="Box-one">
+<div class="estados">
 <h3>Futuro</h3>
+</div>
 <div id="will-do"></div>
 </section>
 
 <section class="Box-two">
-<h3>Haremos</h3>
+ <div class="estados"> 
+<h3>Haciendo</h3>
+</div>
 <div id="doing"></div>
 </section>
 
-<section id="Box-three">
+<section class="Box-three">
+<div class="estados">
 <h3>Terminado</h3>
+</div>
 <div id="finish"></div>
 </div>
 
@@ -46,6 +55,7 @@
 
 
 <!-- <script src="./index.js"></script> -->
+<script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
 <script src="./Newindex.js"></script>
 </body>
 </html>

@@ -1,2 +1,5 @@
 # List-to-do-
-Es una  pagina que puedes agrega cosas por hacer y se guardan en tu escritorio. Al inicio no esta muy bien formada por el hecho de que no tengo una base de datos pero mas a delante le ire agregando una. 
+![alt text](image.png)
+
+Es una lista de tarea la cuales te permite ponerlos en 3 estados distintos: Futuro, Haciendo, Terminando. 
+Esta se puede mover entre si para cuando termina una tarea, suando las tareas son eliminadas apareceran en la parte superior para si quieres volver a colocarlas. 

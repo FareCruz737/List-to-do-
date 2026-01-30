@@ -1,0 +1,81 @@
+
+@media (max-width:1274px){
+.Times{
+
+grid-template-columns: repeat(2,450px);  
+ gap: 30px; 
+}
+#will-do,#doing,#finish{
+width: 400px;
+
+}
+.estados{
+width: 400px;
+
+}
+.estados > h3{
+height: 50px;
+margin: 10px 20px;
+}
+}
+
+@media(max-width:730px){
+.Times{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+
+.Box-three, .Box-two,.Box-one{
+margin: 60px 10px;
+}
+}
+
+@media (max-width:466px){
+.Times{
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.Box-three,.Box-two{
+display: none;
+}
+.Box-one{
+width: auto;
+}
+
+.Input-button > Input{
+padding: 10px 10px;
+}
+.Input-button > button{
+padding: 20px 15px;
+}
+.Box_p{
+display: flex; 
+justify-content: flex-start;
+}
+.Box_Eliminar{
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.Box_Eliminar > span{
+margin-right: 12px ;
+}
+.Box_Eliminar > .asignar{
+margin-right: 12px;
+
+}
+}
+
+/* @media (max-width:375px){
+.Times{
+display: flex;
+justify-content: center;
+width: auto;
+
+
+}
+
+} */

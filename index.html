@@ -4,30 +4,59 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="./styles.css">
-<link rel="icon" href="./clipboard.png" type="image/png">
-<title>To do</title>
+<link rel="stylesheet" href="./mover.css">
+<link rel="stylesheet" href="./movil.css">
+<link rel="icon" href="./img/icons8-list-64.png">
+<title>Lista</title>
 </head>
 <body> 
 
 
+<div id="Eliminados"></div>
+
 
 <header>
-<div class="Aviso"></div>
+<h1>Lista de Tareas</h1>
 </header>
-<h1>doing</h1>
-<main class="one-main">
-<input type="text" id="input-one" placeholder="Que quieres hacer"> 
-<button id='button-one'>Agragar</button>
+
+<section class="pensar">
+<h2>¿Que piensas hacer hoy?</h2>  
+</section>
+
+<section class="Input-button">
+<input type="text" id="Input" placeholder="Hacer">   
+<button id="Button">Visto</button>
+</section>
+
+
+<main class="Times">
+
+<section class="Box-one">
+<div class="estados">
+<h3>Futuro</h3>
+</div>
+<div id="will-do"></div>
+</section>
+
+<section class="Box-two">
+ <div class="estados"> 
+<h3>Haciendo</h3>
+</div>
+<div id="doing"></div>
+</section>
+
+<section class="Box-three">
+<div class="estados">
+<h3>Terminado</h3>
+</div>
+<div id="finish"></div>
+</div>
+
 </main>
 
-<main class="cosa">
-<div id="do"></div>
-</main>
 
-
-
- 
-
-<script src="./index.js"></script>
+<!-- <script src="./index.js"></script> -->
+<script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
+<script src="./Newindex.js"></script>
 </body>
 </html>
